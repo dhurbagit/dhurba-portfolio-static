@@ -15,12 +15,12 @@ import { Icons } from "@/components/Icons";
 import { cn } from "@/lib/utils";
 
 interface FloatingWhatsAppProps {
-  phoneNumber?: string; // e.g. "9779800000000" (Nepal format)
+  phoneNumber?: string; // e.g. "9779841561704" (Nepal format)
   defaultMessage?: string;
 }
 
 export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({
-  phoneNumber = "9779800000000",
+  phoneNumber = "9779841561704",
   defaultMessage = "Hi Dhurba, I visited your portfolio and would like to discuss a software project.",
 }) => {
   const [isOpen, setIsOpen] = useState(false);

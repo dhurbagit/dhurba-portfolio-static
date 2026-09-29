@@ -159,7 +159,7 @@ export const portfolioData: {
       "Software Developer and Web Designer with 2+ years of professional software development experience specializing in PHP and Laravel applications, RESTful APIs, relational databases, and modern web applications.",
     primary_email: "dhurba179@gmail.com",
     secondary_email: "sharvikatech@gmail.com",
-    phone_whatsapp: "+9779800000000",
+    phone_whatsapp: "+9779841561704",
     location: "Nepal",
     country: "Nepal",
     timezone: "UTC+5:45 (NPT)",

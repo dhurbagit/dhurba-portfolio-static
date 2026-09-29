@@ -106,7 +106,7 @@ export default function HomePage() {
 
       {/* Floating WhatsApp & Direct Call Widget */}
       <FloatingWhatsApp
-        phoneNumber={settings?.phone_whatsapp || "+9779800000000"}
+        phoneNumber={settings?.phone_whatsapp || "+9779841561704"}
       />
 
       {/* Interactive Contact Modal */}

@@ -548,7 +548,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                     </a>
 
                     <a
-                      href={`https://wa.me/9779860662241?text=${encodeURIComponent(
+                      href={`https://wa.me/9779841561704?text=${encodeURIComponent(
                         `Hi Dhurba, I just sent you a message through your portfolio:\n\n"${formData.message || "Hello"}"\n\n- ${formData.name || "Visitor"}`
                       )}`}
                       target="_blank"
