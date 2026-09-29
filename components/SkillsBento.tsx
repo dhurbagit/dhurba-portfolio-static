@@ -244,14 +244,14 @@ export const SkillsBento: React.FC<SkillsBentoProps> = ({ skillsData }) => {
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-blue-200 bg-blue-50 text-blue-800 text-xs font-semibold uppercase tracking-wider mb-2">
               <Zap className="w-3.5 h-3.5 text-blue-600" />
-              <span>Technical Capabilities</span>
+              <span>Technical Toolkit</span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Technical <span className="text-blue-700">Skills &amp; Specialization</span>
+              Skills &amp; <span className="text-blue-700">Specializations</span>
             </h2>
           </div>
           <p className="text-xs sm:text-sm text-slate-600 max-w-md">
-            Authentically categorized capabilities across primary development specializations and modern full-stack/project experience.
+            A comprehensive overview of my daily development stack, relational database engineering, and practical frontend experience.
           </p>
         </div>
 
@@ -366,7 +366,7 @@ export const SkillsBento: React.FC<SkillsBentoProps> = ({ skillsData }) => {
               <div>
                 <div className="flex items-center gap-2 text-xs font-mono font-bold text-blue-400 uppercase tracking-wider mb-3.5 pb-2.5 border-b border-slate-800">
                   <Workflow className="w-4 h-4 text-blue-400" />
-                  <span>Development Standard</span>
+                  <span>Engineering Principles</span>
                 </div>
 
                 <div className="space-y-3 text-xs text-slate-300">
@@ -380,8 +380,8 @@ export const SkillsBento: React.FC<SkillsBentoProps> = ({ skillsData }) => {
               </div>
 
               <div className="mt-5 pt-3.5 border-t border-slate-800 text-[10.5px] text-slate-400 flex items-center justify-between">
-                <span className="font-mono text-emerald-400">● Authentic Categorization</span>
-                <span>2+ Years Dev Exp</span>
+                <span className="font-mono text-emerald-400">● Production Ready</span>
+                <span>Laravel &amp; Full-Stack</span>
               </div>
             </div>
           </motion.div>

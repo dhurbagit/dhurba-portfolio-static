@@ -179,8 +179,8 @@ export const portfolioData: {
       "Software Developer and Web Designer with 2+ years of professional software development experience specializing in PHP and Laravel applications. Proven expertise in engineering transactional web platforms, dynamic CMS architectures, RESTful APIs, relational databases, responsive frontend interfaces, and business workflow software.",
     full_bio:
       "Software Developer and Web Designer with 2+ years of professional software development experience specializing in PHP and Laravel applications. Proven expertise in engineering transactional web platforms, dynamic CMS architectures, RESTful APIs, relational databases, responsive frontend interfaces, and business workflow software. Bridges the gap between clean engineering and real-world business objectives.",
-    avatar_url: null,
-    cover_url: null,
+    avatar_url: "/projects/dhurba.jpeg",
+    cover_url: "/projects/coverImage.png",
     highlights: [
       "Full-Stack Engineering with Laravel & Modern UI",
       "Transactional Data Integrity & Financial Platforms",

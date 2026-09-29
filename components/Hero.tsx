@@ -62,8 +62,8 @@ export const Hero: React.FC<HeroProps> = ({
     return url;
   };
 
-  const avatarSrc = resolveUrl(profile?.avatar_url);
-  const coverSrc = resolveUrl(profile?.cover_url);
+  const avatarSrc = resolveUrl(profile?.avatar_url) || "/projects/dhurba.jpeg";
+  const coverSrc = resolveUrl(profile?.cover_url) || "/projects/coverImage.png";
 
   const handleLike = () => {
     if (isLiked) {
