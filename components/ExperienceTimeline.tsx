@@ -44,7 +44,7 @@ const DHURBA_MILESTONES: MilestoneItem[] = [
       "Built responsive, mobile-first user interfaces using JavaScript, jQuery, AJAX, Bootstrap 5, HTML5, and CSS3.",
       "Integrated SEO management, multilingual content, media/gallery managers, product catalogs, and barcode-related functionality.",
       "Managed version control with Git/GitHub, worked in Linux terminal environments, and utilized Docker & Docker Compose for containerized workflows.",
-      "Explored and integrated modern full-stack architectures leveraging React.js, Node.js, Next.js, and Prisma ORM.",
+      "Explored and integrated modern full-stack architectures leveraging React.js, Next.js, PostgreSQL, and Prisma ORM.",
     ],
     skills: [
       "Laravel",
@@ -52,6 +52,7 @@ const DHURBA_MILESTONES: MilestoneItem[] = [
       "MySQL",
       "PostgreSQL",
       "REST APIs",
+      "RBAC",
       "JavaScript",
       "jQuery",
       "Bootstrap 5",
@@ -59,7 +60,7 @@ const DHURBA_MILESTONES: MilestoneItem[] = [
       "Git / GitHub",
       "Docker",
       "React.js",
-      "Node.js",
+      "Next.js",
     ],
     metrics: [
       { label: "Hands-on Experience", value: "2+ Years" },

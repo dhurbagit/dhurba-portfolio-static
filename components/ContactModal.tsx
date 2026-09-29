@@ -48,8 +48,8 @@ export const ContactModal: React.FC<ContactModalProps> = ({
   const secondaryEmail = settings?.secondary_email || "sharvikatech@gmail.com";
   const location = settings?.location || "Nepal";
   const githubUrl = settings?.github_url || "https://github.com/dhurbagit";
-  const linkedinUrl = settings?.linkedin_url || "https://linkedin.com";
-  const facebookUrl = settings?.facebook_url || "https://facebook.com";
+  const linkedinUrl = settings?.linkedin_url || "https://www.linkedin.com/in/dhurba-dhakal-449158423/";
+  const facebookUrl = settings?.facebook_url || "https://www.facebook.com/profile.php?id=61578215681792";
   const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
@@ -474,10 +474,32 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                       ) : (
                         <>
                           <Send className="w-4 h-4" />
-                          <span>Let&apos;s Talk</span>
+                          <span>Send Inquiry</span>
                         </>
                       )}
                     </motion.button>
+
+                    {/* Direct Dual Email Quick Action */}
+                    <div className="pt-2 text-center">
+                      <p className="text-[11.5px] text-slate-500">
+                        Inquiries are sent simultaneously to{" "}
+                        <span className="font-semibold text-blue-700">dhurba179@gmail.com</span> &amp;{" "}
+                        <span className="font-semibold text-indigo-700">sharvikatech@gmail.com</span>.
+                      </p>
+                      <a
+                        href={`mailto:${primaryEmail},${secondaryEmail}?subject=${encodeURIComponent(
+                          formData.subject || "Portfolio Business Inquiry"
+                        )}&body=${encodeURIComponent(
+                          formData.message
+                            ? `Hello Dhurba,\n\n${formData.message}\n\nFrom: ${formData.name || "Visitor"} (${formData.email || "Email"})\n`
+                            : "Hello Dhurba, I would like to discuss a project..."
+                        )}`}
+                        className="inline-flex items-center gap-1.5 text-xs text-slate-600 hover:text-blue-700 font-medium underline mt-1.5 transition-colors"
+                      >
+                        <Mail className="w-3.5 h-3.5" />
+                        <span>Or click here to open in your default email client</span>
+                      </a>
+                    </div>
                   </form>
                 </>
               ) : (
@@ -486,7 +508,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                  className="py-10 text-center flex flex-col items-center"
+                  className="py-6 text-center flex flex-col items-center"
                 >
                   <motion.div
                     initial={{ scale: 0 }}
@@ -497,21 +519,50 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                       damping: 20,
                       delay: 0.1,
                     }}
-                    className="w-18 h-18 rounded-full bg-blue-50 border-2 border-blue-600 flex items-center justify-center shadow-md mb-5"
+                    className="w-16 h-16 rounded-full bg-blue-50 border-2 border-blue-600 flex items-center justify-center shadow-md mb-4"
                   >
-                    <CheckCircle2 className="w-9 h-9 text-blue-700" />
+                    <CheckCircle2 className="w-8 h-8 text-blue-700" />
                   </motion.div>
 
                   <h3 className="text-2xl font-extrabold text-slate-900 tracking-tight mb-2">
-                    Message Sent Successfully!
+                    Inquiry Dispatched!
                   </h3>
-                  <p className="text-sm text-slate-600 max-w-md mx-auto leading-relaxed mb-6">
-                    Thank you, <span className="font-semibold text-slate-900">{formData.name}</span>. Your message has been received and Dhurba Dhakal will get back to you promptly.
+                  <p className="text-xs sm:text-sm text-slate-600 max-w-md mx-auto leading-relaxed mb-4">
+                    Thank you, <span className="font-semibold text-slate-900">{formData.name}</span>. Your message has been sent to{" "}
+                    <span className="font-semibold text-blue-700">dhurba179@gmail.com</span> and{" "}
+                    <span className="font-semibold text-indigo-700">sharvikatech@gmail.com</span>. Dhurba Dhakal will respond promptly.
                   </p>
+
+                  {/* Dual Action Buttons in Success View */}
+                  <div className="flex flex-col sm:flex-row gap-2.5 w-full max-w-sm mb-4">
+                    <a
+                      href={`mailto:${primaryEmail},${secondaryEmail}?subject=${encodeURIComponent(
+                        formData.subject || "Portfolio Business Inquiry"
+                      )}&body=${encodeURIComponent(
+                        `Hello Dhurba,\n\n${formData.message}\n\nFrom: ${formData.name} (${formData.email})`
+                      )}`}
+                      className="flex-1 py-2.5 px-4 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors"
+                    >
+                      <Mail className="w-4 h-4" />
+                      <span>Send Backup Email</span>
+                    </a>
+
+                    <a
+                      href={`https://wa.me/9779860662241?text=${encodeURIComponent(
+                        `Hi Dhurba, I just sent you a message through your portfolio:\n\n"${formData.message || "Hello"}"\n\n- ${formData.name || "Visitor"}`
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 py-2.5 px-4 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors"
+                    >
+                      <Icons.WhatsApp className="w-4 h-4" />
+                      <span>WhatsApp Direct</span>
+                    </a>
+                  </div>
 
                   <button
                     onClick={onClose}
-                    className="px-6 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold transition-all shadow-sm cursor-pointer"
+                    className="px-6 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold transition-all shadow-sm cursor-pointer"
                   >
                     Close Window
                   </button>

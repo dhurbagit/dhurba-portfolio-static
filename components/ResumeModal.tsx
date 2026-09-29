@@ -103,6 +103,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({
 - **Tech / Business Email**: ${secondaryEmail}
 - **GitHub**: ${settings?.github_url || cvData.personalInfo.githubUrl}
 - **LinkedIn**: ${settings?.linkedin_url || cvData.personalInfo.linkedinUrl}
+- **Facebook**: ${settings?.facebook_url || cvData.personalInfo.facebookUrl}
 - **Availability**: ${availability}
 
 ---

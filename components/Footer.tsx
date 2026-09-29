@@ -40,8 +40,8 @@ export const Footer: React.FC<FooterProps> = ({
   const location = settings?.location || "Nepal";
   const availability = settings?.availability_status || "Full-Time • Remote • Freelance Ready";
   const githubUrl = settings?.github_url || "https://github.com/dhurbagit";
-  const linkedinUrl = settings?.linkedin_url || "https://linkedin.com";
-  const facebookUrl = settings?.facebook_url || "https://facebook.com";
+  const linkedinUrl = settings?.linkedin_url || "https://www.linkedin.com/in/dhurba-dhakal-449158423/";
+  const facebookUrl = settings?.facebook_url || "https://www.facebook.com/profile.php?id=61578215681792";
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });

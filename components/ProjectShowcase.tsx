@@ -44,7 +44,7 @@ const PROJECTS: Project[] = [
     title: "Barari / Nepal Pasta Food Company",
     subtitle: "Business Website, Dynamic CMS & Product Management Platform",
     category: "Business CMS & Web Application",
-    image: "/projects/inventory_billing_system.jpg",
+    image: "/projects/inventory_billing_system.png",
     role: "Laravel / Full-Stack Developer",
     description:
       "A comprehensive business website and custom CMS platform developed for a food/product company. Allows administrators to manage business content dynamically without directly modifying source code.",
@@ -64,7 +64,7 @@ const PROJECTS: Project[] = [
     title: "Sixvilla Project",
     subtitle: "Laravel-Powered Business Website & Centralized CMS Solution",
     category: "Custom CMS & Brand Platform",
-    image: "/projects/merchant_analytics_dashboard.jpg",
+    image: "/projects/merchant_analytics_dashboard.png",
     role: "Laravel Developer",
     description:
       "A Laravel-powered business website and custom CMS solution designed to showcase products and brands while providing administrative control over all digital content and customer inquiries.",
@@ -84,7 +84,7 @@ const PROJECTS: Project[] = [
     title: "Off-Hour Tracking System",
     subtitle: "Business Task & Workforce Workflow Management System",
     category: "Business Workflow System",
-    image: "/projects/ndpc_payment_dashboard.jpg",
+    image: "/projects/off-hour.png",
     role: "Full-Stack Developer",
     description:
       "A business-oriented task and workforce tracking system engineered to monitor and manage organizational work processes, shift schedules, task submissions, and review workflows.",
@@ -99,42 +99,35 @@ const PROJECTS: Project[] = [
     accent: "royal",
   },
   {
-    id: "healthcare-marketplace",
+    id: "ndpc-web-portal",
     projectNumber: "04",
-    title: "Hospital Healthcare Distribution Marketplace",
-    subtitle: "Enterprise B2B Medical Procurement & Distribution Marketplace",
-    category: "Modern Full-Stack Marketplace Concept",
-    image: "/projects/merchant_analytics_dashboard.jpg",
-    role: "Full-Stack Architecture Planning & Developer",
+    title: "NDPC Corporate Web Portal & Management System",
+    subtitle: "Public Corporate Company Website with Dynamic Role & Permission RBAC and Scalable Database Design",
+    category: "Corporate Portal & Enterprise Management",
+    image: "/projects/ndpc_payment_dashboard.png",
+    role: "Developer / Full-Stack Laravel Developer",
     description:
-      "A large-scale healthcare distribution marketplace concept connecting hospitals, distributors, and vendors across end-to-end procurement and fulfillment workflows.",
+      "A scalable public corporate company website and administrative web portal developed for Nepal Digital Payment Company (NDPC). Features fine-grained role and permission management (RBAC), multi-tier user authorization, corporate content management, and an optimized, scalable database schema architecture.",
     achievements: [
-      "Architected domain workflows: Product Catalog, RFQ, Quotations, Orders, Fulfillment, Invoicing, and Payment Readiness.",
-      "Built modern frontend and API structures with Next.js, React.js, Node.js, NestJS, and PostgreSQL via Prisma ORM.",
-      "Integrated Redis caching, Docker/Docker Compose environment orchestration, notifications, and comprehensive audit trails.",
+      "Architected a scalable relational database design (MySQL/PostgreSQL) optimized with indexing, normalized schemas, and transaction integrity.",
+      "Engineered granular Role & Permission management (RBAC) supporting custom administrative roles, operational workflows, and access boundaries.",
+      "Built responsive, high-performance public corporate website sections for company governance, announcements, business solutions, and inquiries.",
+      "Implemented secure REST APIs, dynamic CMS modules, audit log tracking, and robust server-side validation using Laravel & PHP.",
     ],
-    tags: ["Next.js", "React.js", "Node.js", "NestJS", "PostgreSQL", "Prisma", "Redis", "Docker", "REST APIs"],
-    metrics: { label: "Architecture", value: "B2B Marketplace Platform" },
+    tags: [
+      "Laravel",
+      "PHP",
+      "MySQL",
+      "PostgreSQL",
+      "RBAC & Permissions",
+      "Scalable DB Design",
+      "REST APIs",
+      "Bootstrap 5",
+      "JavaScript",
+      "Enterprise CMS",
+    ],
+    metrics: { label: "Database & Security", value: "Scalable Schema & Custom RBAC" },
     accent: "royal",
-  },
-  {
-    id: "scos-smart-classroom",
-    projectNumber: "05",
-    title: "Smart Classroom Operating System (SCOS)",
-    subtitle: "Education Technology & School Management SaaS Platform",
-    category: "EdTech & SaaS Platform Concept",
-    image: "/projects/inventory_billing_system.jpg",
-    role: "SaaS Concept & Product Developer",
-    description:
-      "A smart classroom management platform designed for schools to unify smart board classroom interactions, teacher management tools, homework delivery, and student attendance.",
-    achievements: [
-      "Designed software architecture for smart board integration, teacher applications, homework tracking, and school notices.",
-      "Planned extended SaaS modules for online classes, digital examinations, and real-time student performance analytics.",
-      "Demonstrates practical experience in designing software around real-world institutional and educational workflows.",
-    ],
-    tags: ["Laravel", "React.js", "Node.js", "MySQL", "EdTech SaaS", "Smart Board UI", "Attendance Tracking"],
-    metrics: { label: "Domain", value: "Education Technology SaaS" },
-    accent: "crimson",
   },
 ];
 
@@ -156,10 +149,12 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
           const finalImg =
             rawImg ||
             (idx === 0
-              ? "/projects/inventory_billing_system.jpg"
+              ? "/projects/inventory_billing_system.png"
               : idx === 1
-              ? "/projects/merchant_analytics_dashboard.jpg"
-              : "/projects/ndpc_payment_dashboard.jpg");
+              ? "/projects/merchant_analytics_dashboard.png"
+              : idx === 2
+              ? "/projects/off-hour.png"
+              : "/projects/ndpc_payment_dashboard.png");
 
           return {
             id: p.slug || String(p.id),

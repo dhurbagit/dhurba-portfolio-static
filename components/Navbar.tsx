@@ -268,22 +268,33 @@ export const Navbar: React.FC<NavbarProps> = ({
                   <span className="truncate">dhurba179@gmail.com</span>
                 </a>
 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1.5">
                   <a
-                    href="https://github.com/dhurbagit"
+                    href={settings?.github_url || "https://github.com/dhurbagit"}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-1.5 rounded-lg bg-slate-100 text-slate-700"
+                    className="p-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors"
+                    title="GitHub"
                   >
                     <Icons.GitHub className="w-3.5 h-3.5" />
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href={settings?.linkedin_url || "https://www.linkedin.com/in/dhurba-dhakal-449158423/"}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-1.5 rounded-lg bg-slate-100 text-blue-700"
+                    className="p-1.5 rounded-lg bg-slate-100 text-blue-700 hover:bg-blue-50 transition-colors"
+                    title="LinkedIn"
                   >
                     <Icons.LinkedIn className="w-3.5 h-3.5" />
+                  </a>
+                  <a
+                    href={settings?.facebook_url || "https://www.facebook.com/profile.php?id=61578215681792"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-1.5 rounded-lg bg-slate-100 text-blue-600 hover:bg-blue-50 transition-colors"
+                    title="Facebook"
+                  >
+                    <Icons.Facebook className="w-3.5 h-3.5" />
                   </a>
                 </div>
               </div>

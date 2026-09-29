@@ -72,7 +72,7 @@ export default async function ProjectCaseStudyPage({
     .slice(0, 2);
 
   const resolveImg = (src?: string | null) => {
-    if (!src) return "/projects/merchant_analytics_dashboard.jpg";
+    if (!src) return "/projects/merchant_analytics_dashboard.png";
     return src;
   };
 

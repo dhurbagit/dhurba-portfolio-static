@@ -19,7 +19,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Dhurba Dhakal | Full Stack Developer | Laravel & PHP Developer",
   description:
-    "Portfolio of Dhurba Dhakal, Full Stack Developer with 2+ years of experience specializing in Laravel, PHP, MySQL, REST APIs, dynamic CMS platforms, and modern web applications with React, Next.js, Node.js, and PostgreSQL.",
+    "Portfolio of Dhurba Dhakal, Full Stack Developer with 2+ years of experience specializing in Laravel, PHP, MySQL, REST APIs, dynamic CMS platforms, and modern web applications with React, Next.js, and PostgreSQL.",
   keywords: [
     "Dhurba Dhakal",
     "Full Stack Developer",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "Laravel Web Development",
     "PHP Development",
     "React Developer",
-    "Node.js Developer",
+    "Database Designer",
     "Next.js Developer",
     "Web Application Developer",
     "Software Developer",

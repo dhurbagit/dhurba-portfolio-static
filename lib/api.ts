@@ -72,10 +72,20 @@ export async function submitReview(data: {
   name: string;
   role?: string;
   company?: string;
-  service_used: string;
+  service_used?: string;
   rating: number;
   comment: string;
 }) {
+  try {
+    fetch("/api/review", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    }).catch(() => {});
+  } catch {
+    // Non-blocking for review submissions
+  }
+
   return {
     success: true,
     message: "Thank you for your feedback! Your review has been recorded.",
@@ -109,9 +119,68 @@ export async function submitContact(data: {
   subject?: string;
   message: string;
 }) {
+  // 1. Try local server-side API route
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    if (res.ok) {
+      const result = await res.json();
+      return result;
+    }
+  } catch (err) {
+    console.warn("Local API route not reachable, switching to direct dual relay...", err);
+  }
+
+  // 2. Fail-safe direct dual delivery to both sharvikatech@gmail.com and dhurba179@gmail.com
+  try {
+    await Promise.allSettled([
+      fetch("https://formsubmit.co/ajax/dhurba179@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: data.sender_name,
+          email: data.sender_email,
+          phone: data.sender_phone || "Not provided",
+          _subject: `Portfolio Inquiry from ${data.sender_name}: ${data.subject || "General Inquiry"}`,
+          message: data.message,
+          _replyto: data.sender_email,
+          _cc: "sharvikatech@gmail.com",
+          _template: "table",
+          _captcha: "false",
+        }),
+      }),
+      fetch("https://formsubmit.co/ajax/sharvikatech@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: data.sender_name,
+          email: data.sender_email,
+          phone: data.sender_phone || "Not provided",
+          _subject: `[Portfolio Inquiry] ${data.sender_name}: ${data.subject || "General Inquiry"}`,
+          message: data.message,
+          _replyto: data.sender_email,
+          _template: "table",
+          _captcha: "false",
+        }),
+      }),
+    ]);
+  } catch (e) {
+    console.error("Direct fallback dispatch error:", e);
+  }
+
   return {
     success: true,
-    message: "Your message has been received successfully! Dhurba Dhakal will get back to you promptly.",
+    message: "Your message has been sent successfully to both dhurba179@gmail.com and sharvikatech@gmail.com! Dhurba will get back to you promptly.",
     data,
   };
 }

@@ -54,8 +54,8 @@ export const Hero: React.FC<HeroProps> = ({
   const availability = settings?.availability_status || "Full-Time • Remote • Freelance Ready";
   const shortBio = profile?.short_bio || "Software Developer and Web Designer with 2+ years of professional software development experience specializing in PHP and Laravel applications.";
   const githubUrl = settings?.github_url || "https://github.com/dhurbagit";
-  const linkedinUrl = settings?.linkedin_url || "https://linkedin.com";
-  const facebookUrl = settings?.facebook_url || "https://facebook.com";
+  const linkedinUrl = settings?.linkedin_url || "https://www.linkedin.com/in/dhurba-dhakal-449158423/";
+  const facebookUrl = settings?.facebook_url || "https://www.facebook.com/profile.php?id=61578215681792";
 
   const resolveUrl = (url?: string) => {
     if (!url) return null;
@@ -351,8 +351,8 @@ export const Hero: React.FC<HeroProps> = ({
                       "AJAX",
                       "React.js",
                       "Next.js",
-                      "Node.js",
                       "PostgreSQL",
+                      "Prisma ORM",
                       "Docker",
                     ].map((tech) => (
                       <span
@@ -681,15 +681,12 @@ export const Hero: React.FC<HeroProps> = ({
                           {[
                             "React.js",
                             "Next.js",
-                            "Node.js",
-                            "Express.js",
-                            "NestJS",
                             "PostgreSQL",
                             "Prisma ORM",
                             "Redis Caching",
                             "Docker & Compose",
                             "Linux & Terminal",
-                            "Socket.io",
+                            "TailwindCSS",
                           ].map((tech) => (
                             <span
                               key={tech}

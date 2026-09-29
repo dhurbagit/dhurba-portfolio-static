@@ -49,18 +49,18 @@ const SKILL_CATEGORIES: SkillCategory[] = [
         tags: ["REST APIs", "API Integration", "JSON Endpoints", "AJAX"],
       },
       {
-        name: "Node.js & Express.js",
-        level: "Working / Project Experience",
+        name: "Role & Permission Management (RBAC)",
+        level: "Strong / Primary",
         description:
-          "Building asynchronous backend services, middleware, and lightweight API endpoints.",
-        tags: ["Node.js", "Express.js", "Asynchronous Backend"],
+          "Granular role-based access control, user permission matrices, route middleware guards, and multi-tier authorization.",
+        tags: ["RBAC", "Permission Matrix", "Auth Middleware", "User Security"],
       },
       {
-        name: "NestJS & Socket.io",
-        level: "Working / Project Experience",
+        name: "Scalable Database Design & Architecture",
+        level: "Strong / Primary",
         description:
-          "Modular enterprise architecture and real-time bidirectional communication patterns.",
-        tags: ["NestJS", "Socket.io", "Real-Time APIs"],
+          "Relational database design, query optimization, foreign key constraints, and transactional data integrity in MySQL and PostgreSQL.",
+        tags: ["MySQL", "PostgreSQL", "Scalable DB Design", "Query Optimization"],
       },
     ],
     philosophyHighlights: [
